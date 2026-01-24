@@ -4,7 +4,7 @@ import ladpLogo from "@/assets/ladp-logo.png";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-16">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -29,12 +29,12 @@ export const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-inter text-xl md:text-2xl text-secondary/90 mb-4 max-w-3xl mx-auto animate-fade-in delay-200">
+          <p className="font-inter text-xl md:text-2xl text-secondary mb-4 max-w-3xl mx-auto animate-fade-in delay-200">
             UNICAP Recife
           </p>
 
           {/* Description */}
-          <p className="font-inter text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-300">
+          <p className="font-inter text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-300">
             Conectando acadêmicos e profissionais através de eventos de excelência 
             em Direito Previdenciário
           </p>
@@ -43,15 +43,14 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">
             <Button 
               size="lg" 
-              className="bg-white text-primary hover:bg-secondary hover:text-primary font-inter font-semibold text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="bg-secondary text-primary hover:bg-white hover:text-primary font-inter font-semibold text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
               Conheça a LADP
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-inter font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
+              className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-inter font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
             >
               Próximos Eventos
             </Button>
