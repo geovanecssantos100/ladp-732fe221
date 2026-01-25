@@ -38,30 +38,6 @@ export const Hero = () => {
             Conectando acadêmicos e profissionais através de eventos de excelência 
             em Direito Previdenciário
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">
-            <Button 
-              size="lg" 
-              className="bg-secondary text-primary hover:bg-white hover:text-primary font-inter font-semibold text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105"
-            >
-              Conheça a LADP
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-inter font-semibold text-lg px-8 py-6 transition-all duration-300 hover:scale-105"
-            >
-              Próximos Eventos
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full"></div>
         </div>
       </div>
     </section>

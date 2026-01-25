@@ -4,28 +4,12 @@ import { Badge } from "@/components/ui/badge";
 
 const events = [
   {
-    title: "Reforma da Previdência: Atualizações 2025",
-    date: "15 de Novembro, 2025",
-    location: "Auditório Central - UNICAP",
+    title: "Nomeação dos novos membros",
+    date: "20/01/2026",
+    location: "Auditório Fernando Santa Cruz - OAB/PE",
     attendees: "120+ participantes",
     status: "Próximo",
-    description: "Análise detalhada das mudanças recentes na legislação previdenciária com especialistas do TRF5.",
-  },
-  {
-    title: "Workshop: Cálculo de Benefícios",
-    date: "28 de Outubro, 2025",
-    location: "Sala 301 - UNICAP",
-    attendees: "60+ participantes",
-    status: "Inscrições Abertas",
-    description: "Curso prático sobre cálculo de tempo de contribuição e revisão de benefícios previdenciários.",
-  },
-  {
-    title: "Painel: Advocacia Previdenciária",
-    date: "10 de Dezembro, 2025",
-    location: "Auditório Principal - UNICAP",
-    attendees: "150+ participantes",
-    status: "Em Breve",
-    description: "Debate com advogados renomados sobre a prática da advocacia previdenciária no Brasil.",
+    description: "Iremos nomear os novos integrantes da LADP. Além disso, teremos palestras com grandes advogados e algumas palavras de convidados especiais, além da oportunidade de construir um networking no coffee break.",
   },
 ];
 
@@ -79,10 +63,9 @@ export const Events = () => {
                     <MapPin className="h-4 w-4 text-primary" />
                     <span className="font-inter">{event.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Users className="h-4 w-4 text-primary" />
-                    <span className="font-inter">{event.attendees}</span>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             ))}

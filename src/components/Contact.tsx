@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: Instagram,
     title: "Instagram",
-    content: "@ladp.unicap",
-    link: "https://instagram.com/ladp.unicap",
+    content: "@ladprev.unicap",
+    link: "https://www.instagram.com/ladprev.unicap/",
   },
   {
     icon: MapPin,
