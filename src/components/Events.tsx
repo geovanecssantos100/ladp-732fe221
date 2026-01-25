@@ -8,7 +8,7 @@ const events = [
     date: "20/01/2026",
     location: "Auditório Fernando Santa Cruz - OAB/PE",
     attendees: "120+ participantes",
-    status: "Próximo",
+    status: "Encerrado",
     description: "Iremos nomear os novos integrantes da LADP. Além disso, teremos palestras com grandes advogados e algumas palavras de convidados especiais, além da oportunidade de construir um networking no coffee break.",
   },
 ];
