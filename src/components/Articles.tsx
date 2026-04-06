@@ -1,0 +1,142 @@
+import { FileText, ExternalLink, User, Calendar } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+// ============================================================
+// Para adicionar um novo artigo, basta copiar o modelo abaixo
+// e adicionar ao array "articles":
+//
+// {
+//   title: "Título do Artigo",
+//   authors: ["Autor 1", "Autor 2"],
+//   date: "Mês/Ano",
+//   tags: ["tag1", "tag2"],
+//   abstract: "Resumo breve do artigo...",
+//   link: "https://link-para-o-artigo.com" (opcional),
+// },
+// ============================================================
+
+interface Article {
+  title: string;
+  authors: string[];
+  date: string;
+  tags: string[];
+  abstract: string;
+  link?: string;
+}
+
+const articles: Article[] = [
+  {
+    title: "A Reforma da Previdência e seus Impactos nas Regras de Transição",
+    authors: ["Maria Clara Silva", "João Pedro Almeida"],
+    date: "Março/2026",
+    tags: ["Reforma", "Regras de Transição"],
+    abstract:
+      "Este artigo analisa os principais impactos da Emenda Constitucional nº 103/2019 nas regras de transição para aposentadoria, com foco nos segurados do RGPS.",
+    link: "#",
+  },
+  {
+    title: "Benefício de Prestação Continuada: Critérios de Miserabilidade à Luz da Jurisprudência",
+    authors: ["Ana Beatriz Rocha"],
+    date: "Janeiro/2026",
+    tags: ["BPC", "Jurisprudência"],
+    abstract:
+      "Estudo sobre a evolução do critério de renda per capita para concessão do BPC e o papel do STF na flexibilização dos requisitos legais.",
+    link: "#",
+  },
+  {
+    title: "Aposentadoria Especial e a Exposição a Agentes Nocivos no Ambiente de Trabalho",
+    authors: ["Carlos Eduardo Santos", "Fernanda Lima"],
+    date: "Novembro/2025",
+    tags: ["Aposentadoria Especial", "Agentes Nocivos"],
+    abstract:
+      "Análise das controvérsias acerca da comprovação de exposição a agentes nocivos para fins de concessão de aposentadoria especial após a reforma previdenciária.",
+  },
+];
+
+export const Articles = () => {
+  return (
+    <section className="py-24 bg-background" id="artigos">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Artigos Científicos
+            </h2>
+            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>
+            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Produções acadêmicas dos membros da LADP sobre temas relevantes
+              do Direito Previdenciário.
+            </p>
+          </div>
+
+          {/* Articles list */}
+          <div className="grid gap-6">
+            {articles.map((article, index) => (
+              <Card
+                key={index}
+                className="border-border hover:shadow-elegant transition-all duration-300 bg-card overflow-hidden group"
+              >
+                <div className="flex flex-col md:flex-row">
+                  {/* Accent bar */}
+                  <div className="w-full md:w-1.5 h-1.5 md:h-auto bg-gradient-primary shrink-0"></div>
+
+                  <div className="flex-1">
+                    <CardHeader className="pb-3">
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {article.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="secondary"
+                            className="font-inter text-xs"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <CardTitle className="font-playfair text-xl group-hover:text-primary transition-colors leading-snug">
+                        {article.title}
+                      </CardTitle>
+                    </CardHeader>
+
+                    <CardContent className="space-y-3">
+                      <p className="font-inter text-muted-foreground text-sm leading-relaxed">
+                        {article.abstract}
+                      </p>
+
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-2">
+                        <div className="flex items-center gap-1.5">
+                          <User className="h-4 w-4 text-primary" />
+                          <span className="font-inter">
+                            {article.authors.join(", ")}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="h-4 w-4 text-primary" />
+                          <span className="font-inter">{article.date}</span>
+                        </div>
+                        {article.link && (
+                          <a
+                            href={article.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-primary hover:underline font-inter font-medium ml-auto"
+                          >
+                            <FileText className="h-4 w-4" />
+                            Ler artigo
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        )}
+                      </div>
+                    </CardContent>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
