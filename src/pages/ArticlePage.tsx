@@ -7,11 +7,19 @@ import ladpLogo from "@/assets/ladp-logo.png";
 
 const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const article = slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
   const paragraphs = article.content.split("\n\n").filter(Boolean);
+
+  const goToArticles = () => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("artigos")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-background font-inter">
@@ -19,13 +27,13 @@ const ArticlePage = () => {
       <header className="bg-gradient-hero text-white">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            <Link to="/#artigos" className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors font-inter">
+            <button onClick={goToArticles} className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors font-inter">
               <ArrowLeft className="h-4 w-4" />
               Voltar
-            </Link>
-            <Link to="/">
+            </button>
+            <button onClick={() => navigate("/")} >
               <img src={ladpLogo} alt="LADP" className="h-10 w-10" />
-            </Link>
+            </button>
           </div>
         </div>
       </header>
@@ -83,13 +91,13 @@ const ArticlePage = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center">
-          <Link
-            to="/#artigos"
+          <button
+            onClick={goToArticles}
             className="inline-flex items-center gap-2 text-primary hover:underline font-inter font-medium"
           >
             <ArrowLeft className="h-4 w-4" />
             Ver todos os artigos
-          </Link>
+          </button>
         </div>
       </footer>
     </div>
