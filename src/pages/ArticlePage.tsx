@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, User, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getArticleBySlug } from "@/data/articles";
