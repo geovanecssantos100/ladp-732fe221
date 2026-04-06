@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, User, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getArticleBySlug } from "@/data/articles";
@@ -9,6 +10,10 @@ const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const article = slug ? getArticleBySlug(slug) : undefined;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!article) return <NotFound />;
 
