@@ -35,7 +35,7 @@ export const Hero = () => {
 
           {/* Description */}
           <p className="font-inter text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-300">
-            Conectando acadêmicos e profissionais através de eventos de excelência 
+            onectando acadêmicos e profissionais através de eventos de excelência 
             em Direito Previdenciário
           </p>
         </div>
