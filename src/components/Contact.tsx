@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    content: "(81) 99999-9999",
-    link: "tel:+5581999999999",
+    content: "(81) 99831-2877",
+    link: "tel:+5581998312877",
   },
 ];
 
