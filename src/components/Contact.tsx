@@ -5,8 +5,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contato@ladp.unicap.br",
-    link: "mailto:contato@ladp.unicap.br",
+    content: "lacademicaprev@gmail.com",
+    link: "mailto:lacademicaprev@gmail.com",
   },
   {
     icon: Instagram,
