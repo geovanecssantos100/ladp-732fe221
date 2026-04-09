@@ -5,8 +5,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contato@ladp.unicap.br",
-    link: "mailto:contato@ladp.unicap.br",
+    content: "lacademicaprev@gmail.com",
+    link: "mailto:lacademicaprev@gmail.com",
   },
   {
     icon: Instagram,
@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    content: "(81) 99999-9999",
-    link: "tel:+5581999999999",
+    content: "(81) 99831-2877",
+    link: "tel:+5581998312877",
   },
 ];
 
@@ -79,7 +79,7 @@ export const Contact = () => {
               ao lado dos melhores profissionais e acadêmicos de Pernambuco.
             </p>
             <a
-              href="mailto:contato@ladp.unicap.br"
+              href="mailto:lacademicaprev@gmail.com"
               className="inline-flex items-center gap-2 bg-white text-primary font-inter font-semibold px-8 py-4 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 hover:scale-105 shadow-elegant"
             >
               <Mail className="h-5 w-5" />
