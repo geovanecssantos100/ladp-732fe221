@@ -79,7 +79,7 @@ export const Contact = () => {
               ao lado dos melhores profissionais e acadêmicos de Pernambuco.
             </p>
             <a
-              href="mailto:contato@ladp.unicap.br"
+              href="mailto:lacademicaprev@gmail.com"
               className="inline-flex items-center gap-2 bg-white text-primary font-inter font-semibold px-8 py-4 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 hover:scale-105 shadow-elegant"
             >
               <Mail className="h-5 w-5" />
