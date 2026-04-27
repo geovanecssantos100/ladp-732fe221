@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Events } from "@/components/Events";
 import { Articles } from "@/components/Articles";
+import { Justificativa } from "@/components/Justificativa";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -13,6 +14,7 @@ const Index = () => {
       <About />
       <Events />
       <Articles />
+      <Justificativa />
       <Contact />
       <Footer />
       <FloatingWhatsApp />
